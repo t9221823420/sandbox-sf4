@@ -69,6 +69,16 @@ Encore
     // uncomment if you use API Platform Admin (composer req api-admin)
     //.enableReactPreset()
     //.addEntry('admin', './assets/js/admin.js')
+
+    .enableVueLoader(function(options) {
+        // https://vue-loader.vuejs.org/en/configurations/advanced.html
+
+        /*
+        options.preLoaders = {
+            js: '/path/to/custom/loader'
+        };
+        */
+    });
 ;
 
 module.exports = Encore.getWebpackConfig();
