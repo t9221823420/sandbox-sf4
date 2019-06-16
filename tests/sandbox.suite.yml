@@ -1,7 +1,9 @@
 actor: SandboxTester
 modules:
   enabled:
+    - Asserts
     - Symfony:
+        kernel_class: \App\Kernel
         app_path: 'src'
         environment: 'test'
         debug: false

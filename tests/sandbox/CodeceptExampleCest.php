@@ -19,6 +19,7 @@ class CodeceptExampleCest
     public function tryToTestSandboxBundleServices(SandboxTester $I)
     {
         $service = $I->grabService(SanboxPublicService::class);
+        $service = $I->grabService('test.service_container')->get(SanboxPublicService::class);
 
         // test service as
         $I->assertTrue($service->test());
